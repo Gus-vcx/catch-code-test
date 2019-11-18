@@ -22,9 +22,16 @@ export const productGrid = style({
 
 export const metaData = style({
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
+  flexWrap: 'wrap',
   alignItems: 'center',
-  padding: padding(px(24), px(24), px(0))
+  padding: padding(px(24), px(24), px(0)),
+  $nest: {
+    '@media screen and (min-width: 768px)': {
+      flexWrap: 'nowrap',
+      justifyContent: 'space-between'
+    }
+  }
 })
 
 export const cartAlert = style({

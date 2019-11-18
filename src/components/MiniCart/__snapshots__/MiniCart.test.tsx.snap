@@ -39,8 +39,37 @@ exports[`<ProductCard /> Should match snapshot 1`] = `
       },
     ]
   }
-  removeFromCart={[MockFunction]}
-  updateQuantity={[MockFunction]}
+  removeFromCart={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "f56cb6f2-a926-4ff4-80be-4518b0d1997d",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  updateQuantity={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          3,
+          "f56cb6f2-a926-4ff4-80be-4518b0d1997d",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <Popover
     content={

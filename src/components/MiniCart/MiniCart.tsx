@@ -9,12 +9,14 @@ interface Props {
   cart: CartItem[]
   updateQuantity: UpdateQuantity
   removeFromCart: RemoveFromCart
+  trigger?: 'hover' | 'click'
 }
 
 export const MiniCart: React.FC<Props> = ({
   cart,
   updateQuantity,
-  removeFromCart
+  removeFromCart,
+  trigger = 'hover'
 }) => {
 
   const cartItems = () => (
@@ -53,7 +55,7 @@ export const MiniCart: React.FC<Props> = ({
       placement="bottomRight"
       content={cartItems()}
       title="Shopping cart"
-      trigger="hover"
+      trigger={trigger}
     >
       <Badge count={productCount()} showZero>
         <Button><FontAwesomeIcon icon={faShoppingCart} /></Button>

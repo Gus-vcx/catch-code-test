@@ -1,6 +1,8 @@
 
 import React from 'react'
-import { mount, ReactWrapper, shallow } from 'enzyme'
+import { message } from 'antd'
+import { mount, ReactWrapper } from 'enzyme'
+import wait from 'waait'
 import { ProductCategoryPage } from './index'
 import { PageHeader } from '../Common/PageHeader'
 import { mockProducts } from '../../mocks/mockProducts'
@@ -66,13 +68,18 @@ describe('<ProductCategoryPage />', () => {
     expect(wrapper.state('pageSize')).toEqual(20)
   })
 
-  it('Should add to cart', () => {
+  it('Should add to cart', async () => {
+    jest.spyOn(message, 'loading')
+    jest.spyOn(message, 'success')
     wrapper.update()
     wrapper.find('.addToCart button').at(1).simulate('click')
     expect(wrapper.state('cart')).toEqual([{
       product: mockProducts.results[1],
       quantity: 1
     }])
+    expect(message.loading).toHaveBeenCalledWith('Adding to cart...', 1.5)
+    await wait(1500)
+    expect(message.success).toHaveBeenCalled()
   })
 
   it('Should increase quantity if product is already in cart', () => {
