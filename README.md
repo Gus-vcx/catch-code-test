@@ -9,20 +9,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 `npm test` launches the test runner in the interactive watch mode.
 
-Run `npm run test:coverage` for full test coverage report.
+`npm run test:coverage` for full test coverage report.
 
 `npm run build` builds the app for production to the `build` folder.
 
 ## About
 
-##### Libraries used
+#### Libraries used
 * TypeScript
 * TypeStyle (Type-safe CSS)
 * AntD (component library)
 * FontAwesome (icon library)
 * Enzyme (test utility)
 
-##### Comments
+#### Comments
 * Some of the provided `metadata` relating to pagination didn't reflect the actual results, so some of this was left out in place of more accurate pagination feedback.
 * While displaying the 'add to cart' button on hover works on desktop, this may not be the ideal solution for touch devices.
 * The product grid is responsive through the use of CSS grid without media queries.

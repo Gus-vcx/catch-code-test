@@ -5,7 +5,7 @@ export const cartItem = style({
   display: 'flex',
   padding: padding(px(12), px(0)),
   $nest: {
-    img: {
+    'img': {
       marginRight: px(12),
       width: px(80),
       height: px(66)

@@ -15,7 +15,7 @@ export const productCard = style({
       overflow: 'hidden'
     },
     '.ant-card-cover': {
-      borderBottom: 'solid 1px #eaeaea'
+      borderBottom: `solid ${px(1)} #eaeaea`
     },
     '&:hover .addToCart': {
       bottom: px(0),

@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from 'antd'
 import { MiniCart } from '../MiniCart/MiniCart'
 import { LOGO } from './consts'
-import { headerStyle } from './Header.styles'
+import { headerStyle } from './PageHeader.styles'
 import { CartItem, UpdateQuantity, RemoveFromCart } from '../../models/cart'
 
 const { Header } = Layout

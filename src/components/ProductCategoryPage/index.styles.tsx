@@ -8,11 +8,11 @@ export const layout = style({
 
 export const productGrid = style({
   display: 'grid',
-  gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`,
+  gridTemplateColumns: `repeat(auto-fit, minmax(${px(200)}, 1fr))`,
   gridGap: px(24),
   alignItems: 'center',
   padding: px(24),
-  gridAutoRows: `minmax(300px, auto)`,
+  gridAutoRows: `minmax(${px(300)}, auto)`,
   $nest: {
     '> div': {
       height: percent(100)

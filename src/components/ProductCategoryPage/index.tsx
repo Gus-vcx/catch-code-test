@@ -58,7 +58,7 @@ export class ProductCategoryPage extends React.Component<unknown, State> {
     })
   }
 
-  public addToCart = async (product: Product) => {
+  addToCart = async (product: Product) => {
     this.setState((state) => {
       const existingProduct = state.cart.find((item) => item.product.id === product.id)
       if (existingProduct) {
